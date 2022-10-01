@@ -1,10 +1,8 @@
 // Шрифты проекта
-$font-main: "Arial", sans-serif;
-$font-secondary: "Oswald", "Arial", sans-serif;
+$font-main: "Montserrat", sans-serif;
 
-$font-button: $font-secondary;
-$font-input: $font-secondary;
-$font-textarea: $font-secondary;
+$font-button: $font-main;
+$font-input: $font-main;
 
 // Ширина viewport для разных устройств
 $small-width: 320px;
@@ -15,15 +13,23 @@ $large-width: 1440px;
 $transparent: rgba(0, 0, 0, 0);
 $color-inverse: #ffffff;
 
-$gray-lightest: #f2f2f2;
-$gray-lighten: #dcdcdc;
-$gray-light: #d3d3d3;
-$gray: #cdcdcd;
-$gray-dark: #666666;
-$gray-darken: #444444;
-$gray-darkest: #000000;
+$gray-lighten: #f8f8f8;
+$gray-light: #e5e6e8;
+$gray: #e2e2e2;
+$gray-dark: #bdbdbd;
+$gray-darken: #333333;
 
 // Основной цвет проекта
-$color-base: #68b738;
-$color-focus: #fdc305;
-$color-error: #ff8282;
+$base-lighten: #f0ebff;
+$base-light: #eae6fc;
+$base: #9070ec;
+$base-dark: #7859cf;
+$base-darken: #593cac;
+
+// Второстепенный цвет проекта
+$subbase: #f3ebe1;
+
+
+// Общие цвета
+$color-main: $gray-darken;
+$color-background: $color-inverse;
