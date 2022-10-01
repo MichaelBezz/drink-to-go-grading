@@ -1,0 +1,12 @@
+// stylelint-disable no-invalid-position-at-import-rule
+
+@use "sass:math";
+
+// Глобальные стили
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+@import "blocks/test.scss";
+
+// stylelint-enable no-invalid-position-at-import-rule

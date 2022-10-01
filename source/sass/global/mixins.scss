@@ -1,0 +1,45 @@
+@mixin image-normalize {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-reset {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@mixin button-reset {
+  display: block;
+  padding: 0;
+  font-family: $font-button;
+  font-style: normal;
+  font-size: 16px;
+  line-height: math.div(20, 16);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-button-text;
+  background-color: $transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
