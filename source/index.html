@@ -16,7 +16,11 @@
       <nav class="header__navigation navigation">
         <div class="navigation__logo logo">
           <a class="logo__link">
-            <img class="logo__image" src="#" width="32" height="36" alt="Логотип «Drink2Go».">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo/drink-to-go-large.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/drink-to-go-medium.svg">
+              <img class="logo__image" src="img/logo/drink-to-go-small.svg" width="32" height="36" alt="Логотип «Drink2Go».">
+            </picture>
           </a>
 
           <p class="logo__title">Интернет-магазин кофейных напитков</p>
@@ -61,7 +65,16 @@
 
           <ul class="slider__list">
             <li class="slider__item slide">
-              <img class="slide__image" src="#" width="280" height="280" alt="Декаф Флэт Уайт.">
+
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/slide-1-desktop.webp 1x, img/slider/slide-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/slide-1-tablet.webp 1x, img/slider/slide-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider/slide-1-mobile.webp 1x, img/slider/slide-1-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/slider/slide-1-desktop.png 1x, img/slider/slide-1-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/slider/slide-1-tablet.png 1x, img/slider/slide-1-tablet@2x.png 2x">
+                <img class="slide__image" src="img/slider/slide-1-mobile.png" srcset="img/slider/slide-1-mobile@2x.png 2x" width="280" height="280" alt="Кофе Декаф Флэт Уайт.">
+              </picture>
+
               <p class="slide__label">Новинка!</p>
               <h3 class="slide__title">Декаф Флэт Уайт</h3>
               <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -148,12 +161,12 @@
 
                   <div class="range__control control">
                     <label class="control__item">
-                      <span class="visually-hidden">от</span>
+                      <span class="visually-hidden">Минимальная цена.</span>
                       <input class="control__input" type="number" name="min-price" placeholder="0">
                     </label>
                     <span class="control__separator"></span>
                     <label class="control__item">
-                      <span class="visually-hidden">до</span>
+                      <span class="visually-hidden">Максимальная цена.</span>
                       <input class="control__input" type="number" name="max-price" value="900">
                     </label>
                   </div>
@@ -230,42 +243,72 @@
           <div class="catalog__products">
             <ul class="products">
               <li class="products-item product">
-                <img class="product__image" src="#" width="130" height="188" alt="Декаф Флэт Уайт.">
+
+                <picture>
+                  <source type="image/webp" srcset="img/product/can-1.webp 1x, img/product/can-1@2x.webp 2x">
+                  <img class="product__image" src="img/product/can-1.png" srcset="img/product/can-1@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+
                 <h3 class="product__title">Декаф Флэт Уайт</h3>
                 <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <p class="product__price">225₽</p>
                 <a class="product__order" href="#">В корзину</a>
               </li>
               <li class="products-item product">
-                <img class="product__image" src="#" width="130" height="188" alt="Декаф Флэт Уайт.">
+
+                <picture>
+                  <source type="image/webp" srcset="img/product/can-2.webp 1x, img/product/can-2@2x.webp 2x">
+                  <img class="product__image" src="img/product/can-2.png" srcset="img/product/can-2@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+
                 <h3 class="product__title">Декаф Флэт Уайт</h3>
                 <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <p class="product__price">225₽</p>
                 <a class="product__order" href="#">В корзину</a>
               </li>
               <li class="products-item product">
-                <img class="product__image" src="#" width="130" height="188" alt="Декаф Флэт Уайт.">
+
+                <picture>
+                  <source type="image/webp" srcset="img/product/can-3.webp 1x, img/product/can-3@2x.webp 2x">
+                  <img class="product__image" src="img/product/can-3.png" srcset="img/product/can-3@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+
                 <h3 class="product__title">Декаф Флэт Уайт</h3>
                 <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <p class="product__price">225₽</p>
                 <a class="product__order" href="#">В корзину</a>
               </li>
               <li class="products-item product">
-                <img class="product__image" src="#" width="130" height="188" alt="Декаф Флэт Уайт.">
+
+                <picture>
+                  <source type="image/webp" srcset="img/product/can-4.webp 1x, img/product/can-4@2x.webp 2x">
+                  <img class="product__image" src="img/product/can-4.png" srcset="img/product/can-4@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+
                 <h3 class="product__title">Декаф Флэт Уайт</h3>
                 <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <p class="product__price">225₽</p>
                 <a class="product__order" href="#">В корзину</a>
               </li>
               <li class="products-item product">
-                <img class="product__image" src="#" width="130" height="188" alt="Декаф Флэт Уайт.">
+
+                <picture>
+                  <source type="image/webp" srcset="img/product/can-5.webp 1x, img/product/can-5@2x.webp 2x">
+                  <img class="product__image" src="img/product/can-5.png" srcset="img/product/can-5@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+
                 <h3 class="product__title">Декаф Флэт Уайт</h3>
                 <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <p class="product__price">225₽</p>
                 <a class="product__order" href="#">В корзину</a>
               </li>
               <li class="products-item product">
-                <img class="product__image" src="#" width="130" height="188" alt="Декаф Флэт Уайт.">
+
+                <picture>
+                  <source type="image/webp" srcset="img/product/can-6.webp 1x, img/product/can-6@2x.webp 2x">
+                  <img class="product__image" src="img/product/can-6.png" srcset="img/product/can-6@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+
                 <h3 class="product__title">Декаф Флэт Уайт</h3>
                 <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                 <p class="product__price">225₽</p>
@@ -298,7 +341,16 @@
 
       <section class="map">
         <h2 class="visually-hidden">Карта с нашим адресом.</h2>
-        <img class="map__image" src="#" width="320" height="420" alt="Санкт-Петербург, набережная реки Карповки, дом 5.">
+
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+          <img class="map__image" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x" width="320" height="420" alt="Наш адрес: Санкт-Петербург, набережная реки Карповки, дом 5.">
+        </picture>
+
         <div class="js-map"></div>
       </section>
     </main>
@@ -307,7 +359,10 @@
       <div class="footer__wrapper">
         <div class="footer__logo">
           <a class="footer__logo-link">
-            <img class="footer__logo-image" src="#" width="82" height="36" alt="Логотип «Drink2Go».">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo/drink-to-go-large.svg">
+              <img class="footer__logo-image" src="img/logo/drink-to-go-medium.svg" width="82" height="36" alt="Логотип «Drink2Go».">
+            </picture>
           </a>
 
           <p class="footer__logo-title">Интернет-магазин кофейных напитков</p>
@@ -316,17 +371,17 @@
         <ul class="footer__social">
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <span class="visually-hidden">ВКонтакте.</span>
+              <span class="visually-hidden">Наша страничка в ВКонтакте.</span>
             </a>
           </li>
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <span class="visually-hidden">Pinterest.</span>
+              <span class="visually-hidden">Наша страничка в Pinterest.</span>
             </a>
           </li>
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <span class="visually-hidden">Одноклассники.</span>
+              <span class="visually-hidden">Наша страничка в Одноклассники.</span>
             </a>
           </li>
         </ul>
@@ -382,7 +437,7 @@
           <span class="copyright__text">Разработано в</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__header">HTML Academy</span>
-            <img class="copyright__logo" src="#" width="12" height="16" alt="Логотип HTML Academy.">
+            <img class="copyright__logo" src="img/logo/html-academy.svg" width="12" height="16" alt="Логотип «HTML Academy».">
           </a>
         </p>
       </div>
