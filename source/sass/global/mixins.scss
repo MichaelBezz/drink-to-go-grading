@@ -15,22 +15,6 @@
   text-decoration: none;
 }
 
-@mixin button-reset {
-  display: block;
-  padding: 0;
-  font-family: $font-button;
-  font-style: normal;
-  font-size: 16px;
-  line-height: math.div(20, 16);
-  font-weight: 400;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $color-button-text;
-  background-color: $transparent;
-  border: 0;
-  cursor: pointer;
-}
-
 @mixin visually-hidden {
   position: absolute;
   width: 1px;

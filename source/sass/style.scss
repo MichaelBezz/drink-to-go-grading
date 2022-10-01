@@ -3,9 +3,12 @@
 @use "sass:math";
 
 // Глобальные стили
-// @import "global/variables.scss";
-// @import "global/mixins.scss";
-// @import "global/global.scss";
-// @import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+
+// Общие блоки проекта
+@import "blocks/page.scss";
 
 // stylelint-enable no-invalid-position-at-import-rule

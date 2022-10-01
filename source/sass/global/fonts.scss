@@ -1,9 +1,39 @@
 @font-face {
-  font-family: "Oswald";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   src:
-    url("../fonts/") format("woff2"),
-    url("../fonts/") format("woff");
+    url("../fonts/montserrat-regular") format("woff2"),
+    url("../fonts/montserrat-regular") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("../fonts/montserrat-medium") format("woff2"),
+    url("../fonts/montserrat-medium") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("../fonts/montserrat-semibold") format("woff2"),
+    url("../fonts/montserrat-semibold") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("../fonts/montserrat-bold") format("woff2"),
+    url("../fonts/montserrat-bold") format("woff");
   font-display: swap;
 }
