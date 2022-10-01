@@ -3,10 +3,10 @@
 @use "sass:math";
 
 // Глобальные стили
-@import "global/variables.scss";
+@import "global/fonts.scss";
 @import "global/mixins.scss";
 @import "global/global.scss";
-@import "global/fonts.scss";
+@import "global/variables.scss";
 
 // Общие блоки проекта
 @import "blocks/page.scss";
