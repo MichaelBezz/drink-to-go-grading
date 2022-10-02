@@ -75,45 +75,50 @@
 
           <ul class="slider__list">
             <li class="slider__item slide">
-
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/slide-1-desktop.webp 1x, img/slider/slide-1-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/slide-1-tablet.webp 1x, img/slider/slide-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/slider/slide-1-mobile.webp 1x, img/slider/slide-1-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/slider/slide-1-desktop.png 1x, img/slider/slide-1-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/slider/slide-1-tablet.png 1x, img/slider/slide-1-tablet@2x.png 2x">
-                <img class="slide__image" src="img/slider/slide-1-mobile.png" srcset="img/slider/slide-1-mobile@2x.png 2x" width="280" height="280" alt="Кофе Декаф Флэт Уайт.">
-              </picture>
-
-              <p class="slide__label">Новинка!</p>
+              <figure class="slide__image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/slide-1-desktop.webp 1x, img/slider/slide-1-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/slider/slide-1-tablet.webp 1x, img/slider/slide-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/slider/slide-1-mobile.webp 1x, img/slider/slide-1-mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/slider/slide-1-desktop.png 1x, img/slider/slide-1-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/slider/slide-1-tablet.png 1x, img/slider/slide-1-tablet@2x.png 2x">
+                  <img class="slide__image" src="img/slider/slide-1-mobile.png" srcset="img/slider/slide-1-mobile@2x.png 2x" width="280" height="280" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+              </figure>
+              <p class="slide__tag title">Новинка!</p>
               <h3 class="slide__title">Декаф Флэт Уайт</h3>
-              <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-              <div class="slide__cost">
-                <p class="slide__cost-regular">295₽</p>
-                <p class="slide__cost-promo">225₽</p>
+              <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <div class="slide__price">
+                <p class="slide__price-regular">295₽</p>
+                <p class="slide__price-promo">225₽</p>
               </div>
-              <a class="slide__button" href="#">Заказать</a>
+              <a class="slide__button button" href="#">Заказать</a>
             </li>
           </ul>
 
+          <button class="slider__toggle slider__toggle--previous" type="button">
+            <span class="visually-hidden">Предыдущий слайд.</span>
+            <svg class="slider__toggle-icon" width="11" height="20" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+
+          <button class="slider__toggle slider__toggle--next" type="button">
+            <span class="visually-hidden">Следующий слайд.</span>
+            <svg class="slider__toggle-icon" width="11" height="20" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+
           <div class="slider__pagination">
-            <button class="slider__pagination-item" type="button">
+            <button class="slider__pagination-button slider__pagination-button--active" type="button">
               <span class="visually-hidden">Первый слайд.</span>
             </button>
-            <button class="slider__pagination-item" type="button">
+            <button class="slider__pagination-button" type="button">
               <span class="visually-hidden">Второй слайд.</span>
             </button>
-            <button class="slider__pagination-item" type="button">
+            <button class="slider__pagination-button" type="button">
               <span class="visually-hidden">Третий слайд.</span>
-            </button>
-          </div>
-
-          <div class="slider__toggles">
-            <button class="slider__toggle slider__toggle--previous" type="button">
-              <span class="visually-hidden">Предыдущий слайд.</span>
-            </button>
-            <button class="slider__toggle slider__toggle--next" type="button">
-              <span class="visually-hidden">Следующий слайд.</span>
             </button>
           </div>
         </div>

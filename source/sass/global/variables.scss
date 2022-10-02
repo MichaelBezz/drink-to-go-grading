@@ -34,8 +34,21 @@ $subbase: #f3ebe1;
 
 // Общие цвета
 $color-main: $gray-darken;
+$color-title: $base-dark;
+$color-button-text: $color-inverse;
+$color-button-background: $base-dark;
 $color-background: $color-inverse;
 
-// Header проекта
+// Header
 $color-header-icon: $gray-darken;
 $color-header-border: $base-lighten;
+
+// Slider
+$color-slider-price-regular: $base-dark;
+$color-slider-toggle-icon: $base-dark;
+$color-slider-toggle-background: $transparent;
+$color-slider-pagination-active: $base-dark;
+$color-slider-pagination-background: $color-inverse;
+$color-slider-first-background: $subbase;
+$color-slider-second-background: $base-light;
+$color-slider-third-background: $gray-light;

@@ -24,14 +24,12 @@
 }
 
 .navigation__toggle {
+  @include button-reset;
   grid-area: nav-toggle;
   position: relative;
   width: 60px;
   height: 60px;
   padding: 24px 22px;
-  background-color: $transparent;
-  border: 0;
-  cursor: pointer;
 }
 
 // Классы для оживления мобильного меню
