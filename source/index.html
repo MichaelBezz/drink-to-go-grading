@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Drink2Go</title>
-    <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/montserrat-semibol.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-semibol.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
   </head>
 
-  <body class="page__body">
+  <body class="page__body js-exception">
     <header class="header">
-      <nav class="header__navigation navigation">
+      <nav class="header__navigation navigation navigation--closed">
         <div class="navigation__logo logo">
           <a class="logo__link">
             <picture>
@@ -23,12 +23,12 @@
             </picture>
           </a>
 
-          <p class="logo__title">Интернет-магазин кофейных напитков</p>
+          <span class="logo__text">Интернет-магазин кофейных напитков</span>
         </div>
 
         <ul class="navigation__site site-navigation">
           <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#">Главная</a>
+            <a class="site-navigation__link">Главная</a>
           </li>
           <li class="site-navigation__item">
             <a class="site-navigation__link" href="#">Каталог</a>
@@ -43,10 +43,20 @@
 
         <ul class="navigation__user user-navigation">
           <li class="user-navigation__item">
-            <a class="user-navigation__link" href="#">Войти</a>
+            <a class="user-navigation__link" href="#">
+              <svg class="user-navigation__icon" width="16" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#user"></use>
+              </svg>
+              Войти
+            </a>
           </li>
           <li class="user-navigation__item">
-            <a class="user-navigation__link" href="#">Корзина</a>
+            <a class="user-navigation__link" href="#">
+              <svg class="user-navigation__icon" width="16" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite/sprite.svg#cart"></use>
+              </svg>
+              Корзина
+            </a>
           </li>
         </ul>
 
@@ -443,6 +453,7 @@
       </div>
     </footer>
 
-
+    <script src="./js/main.min.js"></script>
+    <script src="./js/mobile-menu.min.js"></script>
   </body>
 </html>

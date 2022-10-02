@@ -9,6 +9,8 @@ $small-width: 320px;
 $medium-width: 768px;
 $large-width: 1440px;
 
+$small-width-only: 767px;
+
 // Оттенки серого
 $transparent: rgba(0, 0, 0, 0);
 $color-inverse: #ffffff;
@@ -33,3 +35,7 @@ $subbase: #f3ebe1;
 // Общие цвета
 $color-main: $gray-darken;
 $color-background: $color-inverse;
+
+// Header проекта
+$color-header-icon: $gray-darken;
+$color-header-border: $base-lighten;

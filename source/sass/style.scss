@@ -11,4 +11,11 @@
 // Общие блоки проекта
 @import "blocks/page.scss";
 
+// Header проекта
+@import "blocks/header.scss";
+@import "blocks/navigation.scss";
+@import "blocks/logo.scss";
+@import "blocks/site-navigation.scss";
+@import "blocks/user-navigation.scss";
+
 // stylelint-enable no-invalid-position-at-import-rule

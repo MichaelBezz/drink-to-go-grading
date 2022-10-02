@@ -1,0 +1,116 @@
+.navigation {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "nav-logo nav-user nav-toggle"
+    "nav-site nav-site nav-site  ";
+  grid-template-columns: 72px 1fr 60px;
+  align-items: center;
+}
+
+.navigation__logo {
+  grid-area: nav-logo;
+}
+
+.navigation__site {
+  grid-area: nav-site;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navigation__user {
+  grid-area: nav-user;
+}
+
+.navigation__toggle {
+  grid-area: nav-toggle;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  padding: 24px 22px;
+  background-color: $transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+// Классы для оживления мобильного меню
+@media (max-width: $small-width-only) {
+  .navigation--closed .navigation__site {
+    display: none;
+  }
+
+  .navigation--closed .navigation__toggle::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 16px;
+    height: 1.5px;
+    margin: auto;
+    background-color: $color-header-icon;
+    box-shadow:
+      0 5px 0 0 $color-header-icon,
+      0 -5px 0 0 $color-header-icon;
+  }
+
+  .navigation--opened .navigation__toggle {
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 16px;
+      height: 2px;
+      margin: auto;
+      background-color: $color-header-icon;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .js-exception .navigation {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .js-exception .navigation__site {
+    position: static;
+    display: block;
+  }
+
+  .js-exception .navigation__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $medium-width) {
+  .navigation {
+    grid-template-areas: "nav-logo nav-site nav-user";
+    grid-template-columns: 90px 1fr 120px;
+  }
+
+  .navigation__site {
+    position: static;
+  }
+
+  .navigation__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $large-width) {
+  .navigation {
+    grid-template-columns: 336px 1fr 280px;
+  }
+}

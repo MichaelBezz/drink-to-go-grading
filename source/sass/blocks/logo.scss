@@ -1,0 +1,43 @@
+.logo {
+  display: flex;
+}
+
+.logo__link {
+  @include link-reset;
+  flex: 0 0 auto;
+  padding: 12px 20px;
+}
+
+.logo__image {
+  @include image-normalize;
+  width: 32px;
+  height: 36px;
+}
+
+.logo__text {
+  font-size: 0;
+  line-height: 0;
+}
+
+@media (min-width: $medium-width) {
+  .logo__link {
+    padding: 22px 0;
+  }
+
+  .logo__image {
+    width: 82px;
+  }
+}
+
+@media (min-width: $large-width) {
+  .logo__image {
+    width: 170px;
+  }
+
+  .logo__text {
+    display: block;
+    padding: 24px 20px;
+    font-size: 12px;
+    line-height: math.div(16, 12);
+  }
+}
