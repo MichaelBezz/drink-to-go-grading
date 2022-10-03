@@ -1,0 +1,41 @@
+.pagination {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  column-gap: 20px;
+}
+
+.pagination__button {
+  @include button-reset;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  line-height: math.div(24, 16);
+  text-align: center;
+  color: $color-pagination-button-text;
+  background-color: $color-pagination-button-background;
+
+  &--previous,
+  &--next {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &--active {
+    font-weight: 600;
+    color: $color-pagination-button-active-text;
+    background-color: $color-pagination-button-active-background;
+  }
+}
+
+.pagination__button--previous .pagination__icon {
+  transform: rotate(90deg);
+}
+
+.pagination__button--next .pagination__icon {
+  transform: rotate(-90deg);
+}
+
+.pagination__icon {
+  fill: $color-pagination-icon;
+}

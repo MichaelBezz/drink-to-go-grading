@@ -13,15 +13,30 @@
 @import "blocks/title.scss";
 @import "blocks/button.scss";
 
-// Header проекта
+// Header
 @import "blocks/header.scss";
 @import "blocks/navigation.scss";
 @import "blocks/logo.scss";
 @import "blocks/site-navigation.scss";
 @import "blocks/user-navigation.scss";
 
-// Slider проекта
+// Slider
 @import "blocks/slider.scss";
 @import "blocks/slide.scss";
+
+// Advantages
+@import "blocks/advantages.scss";
+
+// Catalog
+@import "blocks/catalog.scss";
+@import "blocks/filter.scss";
+@import "blocks/range.scss";
+@import "blocks/select.scss";
+@import "blocks/products.scss";
+@import "blocks/product.scss";
+@import "blocks/pagination.scss";
+
+// Map
+@import "blocks/map.scss";
 
 // stylelint-enable no-invalid-position-at-import-rule

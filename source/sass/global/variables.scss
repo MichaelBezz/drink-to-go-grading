@@ -3,6 +3,7 @@ $font-main: "Montserrat", sans-serif;
 
 $font-button: $font-main;
 $font-input: $font-main;
+$font-select: $font-main;
 
 // Ширина viewport для разных устройств
 $small-width: 320px;
@@ -53,3 +54,43 @@ $color-slider-pagination-background: $color-inverse;
 $color-slider-first-background: $subbase;
 $color-slider-second-background: $base-light;
 $color-slider-third-background: $gray-light;
+
+// Catalog
+$color-catalog-background: $gray-lighten;
+
+// Filter
+$color-filter-reset-button-text: $base-dark;
+$color-filter-reset-button-background: $color-inverse;
+
+// Range
+$color-range-scale: $gray;
+$color-range-level: $base;
+$color-range-pin-background: $color-inverse;
+$color-range-pin-border: $base;
+$color-range-separator: $gray-dark;
+$color-range-input-border: $base;
+
+// Radio-input
+$color-radio-input-background: $color-inverse;
+$color-radio-input-border: $gray-dark;
+$color-radio-input-active: $base-dark;
+$color-radio-input-active-border: $base-dark;
+
+// Checkbox-input
+$color-checkbox-input: $color-inverse;
+$color-checkbox-input-background: $gray-dark;
+$color-checkbox-input-active-background: $base-dark;
+
+// Select
+$color-select-text: $base-dark;
+$color-select-background: $transparent;
+
+// Products
+$color-product-background: $color-inverse;
+
+// Pagination
+$color-pagination-icon: $base-dark;
+$color-pagination-button-text: $base-dark;
+$color-pagination-button-background: $color-inverse;
+$color-pagination-button-active-text: $gray-darken;
+$color-pagination-button-active-background: $transparent;
