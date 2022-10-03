@@ -10,6 +10,18 @@
   padding: 20px 20px 60px;
 }
 
+.slide:first-child {
+  background-color: $color-slider-first-background;
+}
+
+// .slide:nth-child(2) {
+//   background-color: $color-slider-second-background;
+// }
+
+// .slide:last-child {
+//   background-color: $color-slider-third-background;
+// }
+
 .slide__image {
   grid-area: sl-image;
   justify-self: center;
@@ -21,7 +33,9 @@
 .slide__tag {
   grid-area: sl-tag;
   margin: 0;
-  padding: 5px 10px 4px;
+  padding: 10px;
+  padding-bottom: 4px;
+  text-align: center;
 }
 
 .slide__title {
@@ -48,8 +62,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-right: 14px;
   padding: 4px;
-  padding-right: 18px;
 }
 
 .slide__price-regular {
@@ -84,8 +98,23 @@
       "sl-description sl-description"
       "sl-price       sl-button     "
       "sl-image       sl-image      ";
-    padding: 55px 80px 0;
+    padding: 50px 80px 0;
   }
+
+  .slide:first-child {
+    background-color: $color-background;
+    background-image: linear-gradient($color-slider-first-background 78%, $color-background 78%);
+  }
+
+  // .slide:nth-child(2) {
+  //   background-color: $color-background;
+  //   background-image: linear-gradient($color-slider-second-background 78%, $color-background 78%);
+  // }
+
+  // .slide:last-child {
+  //   background-color: $color-background;
+  //   background-image: linear-gradient($color-slider-third-background 78%, $color-background 78%);
+  // }
 
   .slide__image {
     width: 476px;
@@ -99,7 +128,8 @@
   }
 
   .slide__description {
-    padding: 16px 10px 20px;
+    padding: 20px;
+    padding-top: 16px;
     font-size: 20px;
     line-height: math.div(32, 20);
   }
@@ -111,6 +141,7 @@
 
 @media (min-width: $large-width) {
   .slide {
+    position: relative;
     grid-template-areas:
       "sl-image sl-tag         sl-tag        "
       "sl-image sl-title       sl-title      "
@@ -119,7 +150,44 @@
     grid-template-columns: 600px auto 1fr;
     grid-template-rows: min-content min-content min-content 1fr;
     padding: 30px 105px 84px;
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: calc(((100vw - $large-width) / 2) * -1);
+      content: "";
+      height: 100%;
+      width: 100vw;
+    }
   }
+
+  .slide:first-child {
+    background-color: $color-slider-first-background;
+    background-image: none;
+
+    &::before {
+      background-color: $color-slider-first-background;
+    }
+  }
+
+  // .slide:nth-child(2) {
+  //   background-color: $color-slider-second-background;
+  //   background-image: none;
+
+  //   &::before {
+  //     background-color: $color-slider-second-background;
+  //   }
+  // }
+
+  // .slide:last-child {
+  //   background-color: $color-slider-third-background;
+  //   background-image: none;
+
+  //   &::before {
+  //     background-color: $color-slider-third-background;
+  //   }
+  // }
 
   .slide__image {
     width: 600px;
