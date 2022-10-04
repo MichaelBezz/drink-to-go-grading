@@ -1,0 +1,15 @@
+.logo-footer__link {
+  @include link-reset;
+  padding: 22px 20px 17px;
+}
+
+.logo-footer__image {
+  @include image-normalize;
+  width: 82px;
+  height: 36px;
+}
+
+.logo-footer__title {
+  font-size: 0;
+  line-height: 0;
+}

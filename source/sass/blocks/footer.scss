@@ -1,0 +1,29 @@
+.footer {
+  min-width: $small-width;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-areas:
+    "ft-logo      ft-social   "
+    "ft-group     ft-group    "
+    "ft-copyright ft-copyright";
+  grid-template-columns: 122px 1fr;
+  column-gap: 18px;
+}
+
+.footer__logo {
+  grid-area: ft-logo;
+}
+
+.footer__social {
+  grid-area: ft-social;
+}
+
+.footer__group {
+  grid-area: ft-group;
+}
+
+.footer__copyright {
+  grid-area: ft-copyright;
+}
