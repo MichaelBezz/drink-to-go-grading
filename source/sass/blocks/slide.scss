@@ -8,22 +8,22 @@
     "sl-price       sl-button     ";
   grid-template-columns: 1fr 1fr;
   padding: 20px 20px 60px;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .slide:first-child {
-  background-color: $color-slider-first-background;
+  background-color: $color-slider-light-background;
 }
 
 .slide:nth-child(2) {
-  background-color: $color-slider-second-background;
+  background-color: $color-slider-background;
 }
 
 .slide:last-child {
-  background-color: $color-slider-third-background;
-}
-
-.slide--hidden {
-  display: none;
+  background-color: $color-slider-dark-background;
 }
 
 .slide__image {
@@ -32,13 +32,14 @@
   width: 280px;
   height: 280px;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .slide__label {
   grid-area: sl-label;
   margin: 0;
-  padding: 10px;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
+  padding: 0 20px;
   font-size: 12px;
   line-height: math.div(16, 12);
   font-weight: 700;
@@ -51,6 +52,7 @@
 .slide__title {
   grid-area: sl-title;
   margin: 0;
+  margin-bottom: 10px;
   font-size: 36px;
   line-height: math.div(48, 36);
   font-weight: 700;
@@ -61,7 +63,7 @@
 .slide__description {
   grid-area: sl-description;
   margin: 0;
-  padding: 10px 0 20px;
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: math.div(20, 14);
   text-align: center;
@@ -69,10 +71,11 @@
 
 .slide__price {
   grid-area: sl-price;
+  justify-self: start;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin-right: 14px;
   padding: 4px;
 }
 
@@ -87,15 +90,14 @@
 
 .slide__price-promo {
   margin: 0;
-  font-weight: 600;
   font-size: 20px;
-  line-height: 32px;
+  line-height: math.div(32, 20);
+  font-weight: 600;
 }
 
 .slide__button {
   grid-area: sl-button;
   width: 80%;
-  margin-left: 2px;
   font-size: 16px;
   line-height: math.div(24, 16);
 }
@@ -108,44 +110,52 @@
       "sl-description sl-description"
       "sl-price       sl-button     "
       "sl-image       sl-image      ";
-    padding: 50px 80px 0;
+    padding: 60px 80px 0;
   }
 
   .slide:first-child {
     background-color: $color-background;
-    background-image: linear-gradient($color-slider-first-background 78%, $color-background 78%);
+    background-image: linear-gradient($color-slider-light-background 78%, $color-background 78%);
   }
 
   .slide:nth-child(2) {
     background-color: $color-background;
-    background-image: linear-gradient($color-slider-second-background 78%, $color-background 78%);
+    background-image: linear-gradient($color-slider-background 78%, $color-background 78%);
   }
 
   .slide:last-child {
     background-color: $color-background;
-    background-image: linear-gradient($color-slider-third-background 78%, $color-background 78%);
+    background-image: linear-gradient($color-slider-dark-background 78%, $color-background 78%);
   }
 
   .slide__image {
     width: 476px;
     height: 476px;
     margin-top: 10px;
+    margin-bottom: 0;
   }
 
   .slide__title {
+    margin-bottom: 16px;
+    padding: 0 20px;
     font-size: 56px;
     line-height: math.div(80, 56);
   }
 
   .slide__description {
-    padding: 20px;
-    padding-top: 16px;
+    padding: 0 20px;
     font-size: 20px;
     line-height: math.div(32, 20);
   }
 
+  .slide__price {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
   .slide__button {
     width: 37%;
+    margin-left: 2px;
   }
 }
 
@@ -173,29 +183,29 @@
   }
 
   .slide:first-child {
-    background-color: $color-slider-first-background;
+    background-color: $color-slider-light-background;
     background-image: none;
 
     &::before {
-      background-color: $color-slider-first-background;
+      background-color: $color-slider-light-background;
     }
   }
 
   .slide:nth-child(2) {
-    background-color: $color-slider-second-background;
+    background-color: $color-slider-background;
     background-image: none;
 
     &::before {
-      background-color: $color-slider-second-background;
+      background-color: $color-slider-background;
     }
   }
 
   .slide:last-child {
-    background-color: $color-slider-third-background;
+    background-color: $color-slider-dark-background;
     background-image: none;
 
     &::before {
-      background-color: $color-slider-third-background;
+      background-color: $color-slider-dark-background;
     }
   }
 
@@ -206,8 +216,8 @@
   }
 
   .slide__label {
-    margin-top: 146px;
-    padding: 4px 30px;
+    margin-top: 150px;
+    padding: 0 30px;
     text-align: left;
   }
 
@@ -217,7 +227,8 @@
   }
 
   .slide__description {
-    padding: 16px 30px 40px;
+    margin-bottom: 40px;
+    padding: 0 30px;
     text-align: left;
   }
 
