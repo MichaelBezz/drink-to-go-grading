@@ -5,3 +5,12 @@
   row-gap: 21px;
   margin-bottom: 40px;
 }
+
+@media (min-width: $medium-width) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 70px;
+  }
+}

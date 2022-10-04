@@ -1,7 +1,7 @@
 .pagination {
   @include list-reset;
   display: grid;
-  grid-template-columns: repeat(5, 40px);
+  grid-auto-flow: column;
   column-gap: 20px;
 }
 
@@ -28,6 +28,10 @@
   }
 }
 
+.pagination__icon {
+  fill: $color-pagination-icon;
+}
+
 .pagination__button--previous .pagination__icon {
   transform: rotate(90deg);
 }
@@ -36,6 +40,26 @@
   transform: rotate(-90deg);
 }
 
-.pagination__icon {
-  fill: $color-pagination-icon;
+@media (min-width: $medium-width) {
+  .pagination {
+    column-gap: 0;
+  }
+
+  .pagination__item:nth-child(3) {
+    margin: 0 20px;
+  }
+
+  .pagination__button {
+    &--previous,
+    &--next {
+      min-width: 124px;
+      width: auto;
+      font-size: 14px;
+      line-height: math.div(24, 14);
+    }
+  }
+
+  .pagination__icon {
+    display: none;
+  }
 }

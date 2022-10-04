@@ -15,13 +15,14 @@
     "ct-pagination";
   grid-template-columns: 1fr;
   justify-items: center;
-  padding: 46px 20px 44px;
+  padding: 50px 20px 44px;
 }
 
 .catalog__title {
   grid-area: ct-title;
   margin: 0;
-  padding: 4px 10px 5px;
+  margin-bottom: 5px;
+  padding: 0 10px;
 }
 
 .catalog__intro {
@@ -48,4 +49,28 @@
 
 .catalog__pagination {
   grid-area: ct-pagination;
+}
+
+@media (min-width: $medium-width) {
+  .catalog__wrapper {
+    justify-items: normal;
+    padding: 80px 20px 90px;
+  }
+
+  .catalog__title {
+    margin-bottom: 3px;
+  }
+
+  .catalog__intro {
+    font-size: 42px;
+    line-height: math.div(64, 42);
+  }
+
+  .catalog__select {
+    justify-self: end;
+  }
+
+  .catalog__pagination {
+    justify-self: end;
+  }
 }

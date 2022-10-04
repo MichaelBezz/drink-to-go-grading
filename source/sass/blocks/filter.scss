@@ -1,22 +1,30 @@
 .filter {
-  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "fl-range  "
+    "fl-milk   "
+    "fl-country"
+    "fl-buttons";
+  grid-template-columns: 1fr;
 }
 
 .filter__fieldset {
-  width: 280px;
   margin: 0;
   padding: 0;
   border: 0;
 
   &--range {
+    grid-area: fl-range;
     margin-bottom: 24.5px;
   }
 
   &--milk {
+    grid-area: fl-milk;
     margin-bottom: 20px;
   }
 
   &--country {
+    grid-area: fl-country;
     margin-bottom: 34px;
   }
 }
@@ -120,6 +128,7 @@
 }
 
 .filter__buttons {
+  grid-area: fl-buttons;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,16 +136,74 @@
 }
 
 .filter__send {
+  min-width: 160px;
   margin-bottom: 24.5px;
-  padding: 10px 14px;
+  padding: 10px;
   font-size: 13px;
   line-height: math.div(24, 13);
 }
 
 .filter__reset {
-  padding: 10px 16px;
+  min-width: 160px;
+  padding: 10px;
   font-size: 14px;
   line-height: math.div(24, 14);
   color: $color-filter-reset-button-text;
   background-color: $color-filter-reset-button-background;
+}
+
+@media (min-width: $medium-width) {
+  .filter {
+    grid-template-areas:
+      "fl-range   fl-milk    fl-country"
+      "fl-buttons fl-buttons fl-buttons";
+    grid-template-columns: 238px 1fr 1fr;
+    justify-items: stretch;
+    column-gap: 12px;
+    width: 728px;
+    margin: 0 auto;
+  }
+
+  .filter__fieldset {
+    &--range {
+      margin-bottom: 0;
+    }
+
+    &--milk {
+      margin-bottom: 0;
+    }
+
+    &--country {
+      margin-bottom: 0;
+    }
+  }
+
+  .filter__legend {
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+
+  .filter__fieldset--milk .filter__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .filter__buttons {
+    flex-direction: row;
+    margin-top: 40px;
+  }
+
+  .filter__send {
+    min-width: 148px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    margin-left: 24.7%;
+    padding: 8px 3px;
+    font-size: 14px;
+    line-height: math.div(24, 14);
+  }
+
+  .filter__reset {
+    min-width: 138px;
+    padding: 8px 3px;
+  }
 }
