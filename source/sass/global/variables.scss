@@ -34,14 +34,15 @@ $subbase: #f3ebe1;
 
 
 // Общие цвета
-$color-main: $gray-darken;
+$color-text: $gray-darken;
 $color-title: $base-dark;
+$color-background: $color-inverse;
 $color-button-text: $color-inverse;
 $color-button-background: $base-dark;
-$color-background: $color-inverse;
 
 // Header
 $color-header-icon: $gray-darken;
+$color-header-link-active: $base-dark;
 $color-header-border: $base-lighten;
 
 // Slider
