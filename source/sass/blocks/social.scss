@@ -2,8 +2,8 @@
   @include list-reset;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40px, min-content));
-  column-gap: 20px;
   align-items: center;
+  column-gap: 20px;
 }
 
 .social__link {
@@ -17,4 +17,17 @@
 .social__icon {
   margin: auto;
   fill: $color-social-icon;
+}
+
+@media (min-width: $medium-width) {
+  .social {
+    justify-content: end;
+  }
+}
+
+@media (min-width: $large-width) {
+  .social {
+    justify-content: start;
+    margin-top: 18px;
+  }
 }

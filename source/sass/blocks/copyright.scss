@@ -30,3 +30,10 @@
   margin-left: 4px;
   fill: $color-copyright-logo;
 }
+
+
+@media (min-width: $medium-width) {
+  .copyright {
+    padding: 20px;
+  }
+}

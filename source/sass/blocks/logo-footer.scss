@@ -13,3 +13,36 @@
   font-size: 0;
   line-height: 0;
 }
+
+@media (min-width: $medium-width) {
+  .logo-footer__link {
+    margin-left: -10px;
+    padding: 10px;
+    padding-top: 15px;
+  }
+
+  .logo-footer__image {
+    width: 170px;
+  }
+}
+
+@media (min-width: $large-width) {
+  .logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-footer__link {
+    padding: 10px;
+    padding-bottom: 5px;
+  }
+
+  .logo-footer__title {
+    margin: 0;
+    margin-left: -10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: math.div(20, 14);
+  }
+}

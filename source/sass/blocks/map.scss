@@ -18,6 +18,10 @@
 }
 
 @media (min-width: $large-width) {
+  .map {
+    max-width: $large-width;
+  }
+
   .map__image {
     width: 1440px;
     height: 540px;
