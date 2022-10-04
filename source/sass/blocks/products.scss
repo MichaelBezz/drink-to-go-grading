@@ -1,16 +1,24 @@
 .products {
   @include list-reset;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 20px;
   row-gap: 21px;
   margin-bottom: 40px;
 }
 
 @media (min-width: $medium-width) {
   .products {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(349px, 1fr));
     column-gap: 30px;
     row-gap: 30px;
     margin-bottom: 70px;
+  }
+}
+
+@media (min-width: $large-width) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(317px, 1fr));
+    margin-bottom: 59px;
   }
 }

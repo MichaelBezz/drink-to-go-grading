@@ -207,3 +207,44 @@
     padding: 8px 3px;
   }
 }
+
+@media (min-width: $large-width) {
+  .filter {
+    grid-template-areas:
+      "fl-range  "
+      "fl-milk   "
+      "fl-country"
+      "fl-buttons";
+    grid-template-columns: 1fr;
+    width: 318px;
+  }
+
+  .filter__fieldset {
+    &--range {
+      margin-top: 4px;
+      margin-bottom: 30px;
+    }
+
+    &--milk {
+      margin-bottom: 30px;
+    }
+
+    &--country {
+      margin-bottom: 40px;
+    }
+  }
+
+  .filter__buttons {
+    margin-top: 0;
+  }
+
+  .filter__send {
+    min-width: 150px;
+    margin-right: 18px;
+    margin-left: 0;
+  }
+
+  .filter__reset {
+    min-width: 150px;
+  }
+}

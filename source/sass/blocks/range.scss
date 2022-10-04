@@ -100,3 +100,22 @@
     min-height: 40px;
   }
 }
+
+@media (min-width: $large-width) {
+  .range {
+    width: 318px;
+    margin-left: 0;
+  }
+
+  .range__scale {
+    margin-bottom: 20px;
+  }
+
+  .range__control {
+    column-gap: 20px;
+  }
+
+  .range__separator {
+    width: 10px;
+  }
+}

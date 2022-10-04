@@ -78,3 +78,9 @@
     margin-bottom: 20px;
   }
 }
+
+@media (min-width: $large-width) {
+  .product {
+    grid-template-columns: 116px 1fr;
+  }
+}
