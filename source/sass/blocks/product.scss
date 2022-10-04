@@ -12,23 +12,31 @@
   border-radius: 4px;
 }
 
-.product__image {
-  @include image-normalize;
+.product__image-link {
+  @include link-reset;
   grid-area: pr-image;
   justify-self: center;
+  margin-bottom: 24px;
+}
+
+.product__image {
+  @include image-normalize;
   width: 130px;
   height: 188px;
-  margin: 0;
-  margin-bottom: 24px;
 }
 
 .product__title {
   grid-area: pr-title;
   margin: 0;
   margin-bottom: 4px;
+}
+
+.product__link {
+  @include link-reset;
   font-size: 18px;
   line-height: math.div(32, 18);
   font-weight: 700;
+  color: $color-text;
 }
 
 .product__description {
@@ -64,12 +72,15 @@
     padding-top: 50px;
   }
 
-  .product__image {
+  .product__image-link {
     margin-bottom: 30px;
   }
 
   .product__title {
     margin-bottom: 10px;
+  }
+
+  .product__link {
     font-size: 24px;
     line-height: math.div(36, 24);
   }
