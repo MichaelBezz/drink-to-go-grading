@@ -71,11 +71,11 @@
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков - «Drink2Go».</h1>
 
       <section class="slider">
-        <div class="slider__wrapper">
-          <h2 class="visually-hidden">Слайдер с промо-товарами.</h2>
+        <h2 class="visually-hidden">Слайдер с промо-товарами.</h2>
 
-          <ul class="slider__list">
-            <li class="slider__item slide">
+        <div class="slider__list">
+          <div class="slider__item slide slide--white">
+            <div class="slide__wrapper">
               <figure class="slide__image">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/slide-1-desktop.webp 1x, img/slider/slide-1-desktop@2x.webp 2x">
@@ -94,8 +94,10 @@
                 <p class="slide__price-promo">225₽</p>
               </div>
               <a class="slide__button button" href="#">Заказать</a>
-            </li>
-            <li class="slider__item slide slide--hidden">
+            </div>
+          </div>
+          <div class="slider__item slide slide--latte slide--hidden">
+            <div class="slide__wrapper">
               <figure class="slide__image">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/slide-2-desktop.webp 1x, img/slider/slide-2-desktop@2x.webp 2x">
@@ -114,8 +116,10 @@
                 <p class="slide__price-promo">265₽</p>
               </div>
               <a class="slide__button button" href="#">Заказать</a>
-            </li>
-            <li class="slider__item slide slide--hidden">
+            </div>
+          </div>
+          <div class="slider__item slide slide--espresso slide--hidden">
+            <div class="slide__wrapper">
               <figure class="slide__image">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/slider/slide-3-desktop.webp 1x, img/slider/slide-3-desktop@2x.webp 2x">
@@ -134,35 +138,35 @@
                 <p class="slide__price-promo">375₽</p>
               </div>
               <a class="slide__button button" href="#">Заказать</a>
-            </li>
-          </ul>
-
-          <button class="slider__toggle slider__toggle--previous" type="button">
-            <span class="visually-hidden">Предыдущий слайд.</span>
-            <svg class="slider__toggle-icon" width="11" height="20" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite/sprite.svg#arrow"></use>
-            </svg>
-          </button>
-
-          <button class="slider__toggle slider__toggle--next" type="button">
-            <span class="visually-hidden">Следующий слайд.</span>
-            <svg class="slider__toggle-icon" width="11" height="20" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite/sprite.svg#arrow"></use>
-            </svg>
-          </button>
-
-          <div class="slider__pagination">
-            <button class="slider__pagination-button slider__pagination-button--active" type="button">
-              <span class="visually-hidden">Первый слайд.</span>
-            </button>
-            <button class="slider__pagination-button" type="button">
-              <span class="visually-hidden">Второй слайд.</span>
-            </button>
-            <button class="slider__pagination-button" type="button">
-              <span class="visually-hidden">Третий слайд.</span>
-            </button>
+            </div>
           </div>
         </div>
+
+        <div class="slider__pagination">
+          <button class="slider__pagination-button slider__pagination-button--active" type="button">
+            <span class="visually-hidden">Первый слайд.</span>
+          </button>
+          <button class="slider__pagination-button" type="button">
+            <span class="visually-hidden">Второй слайд.</span>
+          </button>
+          <button class="slider__pagination-button" type="button">
+            <span class="visually-hidden">Третий слайд.</span>
+          </button>
+        </div>
+
+        <button class="slider__toggle slider__toggle--previous" type="button">
+          <span class="visually-hidden">Предыдущий слайд.</span>
+          <svg class="slider__toggle-icon slider__toggle-icon--previous" width="11" height="20" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite/sprite.svg#arrow"></use>
+          </svg>
+        </button>
+
+        <button class="slider__toggle slider__toggle--next" type="button">
+          <span class="visually-hidden">Следующий слайд.</span>
+          <svg class="slider__toggle-icon slider__toggle-icon--next" width="11" height="20" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite/sprite.svg#arrow"></use>
+          </svg>
+        </button>
       </section>
 
       <section class="advantages">

@@ -2,15 +2,11 @@
   position: relative;
   min-width: $small-width;
   width: 100%;
-  margin: 0 auto;
-}
-
-.slider__list {
-  @include list-reset;
 }
 
 .slider__toggle {
   @include button-reset;
+  z-index: 1;
   position: absolute;
   top: 0;
   display: flex;
@@ -20,7 +16,6 @@
   &--previous {
     left: 0;
     background-color: $color-slider-toggle-background;
-    transform: rotate(180deg);
   }
 
   &--next {
@@ -32,6 +27,10 @@
 .slider__toggle-icon {
   margin: auto;
   fill: $color-slider-toggle-icon;
+
+  &--previous {
+    transform: rotate(180deg);
+  }
 }
 
 .slider__pagination {
@@ -46,12 +45,16 @@
 }
 
 @media (min-width: $large-width) {
-  .slider {
-    max-width: $large-width;
-  }
-
   .slider__toggle {
     height: 100%;
+
+    &--previous {
+      left: calc((100vw - $large-width) / 2);
+    }
+
+    &--next {
+      right: calc((100vw - $large-width) / 2);
+    }
   }
 
   .slider__pagination {

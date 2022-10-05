@@ -1,4 +1,22 @@
 .slide {
+  &--white {
+    background-color: $color-slider-white-background;
+  }
+
+  &--latte {
+    background-color: $color-slider-latte-background;
+  }
+
+  &--espresso {
+    background-color: $color-slider-espresso-background;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.slide__wrapper {
   display: grid;
   grid-template-areas:
     "sl-image       sl-image      "
@@ -7,23 +25,9 @@
     "sl-description sl-description"
     "sl-price       sl-button     ";
   grid-template-columns: 1fr 1fr;
+  min-height: 656px;
+  margin: 0 auto;
   padding: 20px 20px 60px;
-
-  &--hidden {
-    display: none;
-  }
-}
-
-.slide:first-child {
-  background-color: $color-slider-light-background;
-}
-
-.slide:nth-child(2) {
-  background-color: $color-slider-background;
-}
-
-.slide:last-child {
-  background-color: $color-slider-dark-background;
 }
 
 .slide__image {
@@ -71,7 +75,6 @@
 
 .slide__price {
   grid-area: sl-price;
-  justify-self: start;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -97,6 +100,7 @@
 
 .slide__button {
   grid-area: sl-button;
+  align-self: center;
   width: 80%;
   font-size: 16px;
   line-height: math.div(24, 16);
@@ -104,6 +108,23 @@
 
 @media (min-width: $medium-width) {
   .slide {
+    &--white {
+      background-color: $color-background;
+      background-image: linear-gradient($color-slider-white-background 78%, $color-background 78%);
+    }
+
+    &--latte {
+      background-color: $color-background;
+      background-image: linear-gradient($color-slider-latte-background 78%, $color-background 78%);
+    }
+
+    &--espresso {
+      background-color: $color-background;
+      background-image: linear-gradient($color-slider-espresso-background 78%, $color-background 78%);
+    }
+  }
+
+  .slide__wrapper {
     grid-template-areas:
       "sl-label       sl-label      "
       "sl-title       sl-title      "
@@ -111,21 +132,6 @@
       "sl-price       sl-button     "
       "sl-image       sl-image      ";
     padding: 60px 80px 0;
-  }
-
-  .slide:first-child {
-    background-color: $color-background;
-    background-image: linear-gradient($color-slider-light-background 78%, $color-background 78%);
-  }
-
-  .slide:nth-child(2) {
-    background-color: $color-background;
-    background-image: linear-gradient($color-slider-background 78%, $color-background 78%);
-  }
-
-  .slide:last-child {
-    background-color: $color-background;
-    background-image: linear-gradient($color-slider-dark-background 78%, $color-background 78%);
   }
 
   .slide__image {
@@ -161,6 +167,23 @@
 
 @media (min-width: $large-width) {
   .slide {
+    &--white {
+      background-color: $color-slider-white-background;
+      background-image: none;
+    }
+
+    &--latte {
+      background-color: $color-slider-latte-background;
+      background-image: none;
+    }
+
+    &--espresso {
+      background-color: $color-slider-espresso-background;
+      background-image: none;
+    }
+  }
+
+  .slide__wrapper {
     position: relative;
     grid-template-areas:
       "sl-image sl-label       sl-label      "
@@ -169,44 +192,9 @@
       "sl-image sl-price       sl-button     ";
     grid-template-columns: 600px auto 1fr;
     grid-template-rows: min-content min-content min-content 1fr;
+    column-gap: 30px;
+    max-width: $large-width;
     padding: 30px 105px 84px;
-
-    &::before {
-      z-index: -1;
-      position: absolute;
-      top: 0;
-      left: calc(((100vw - $large-width) / 2) * -1);
-      content: "";
-      height: 100%;
-      width: 100vw;
-    }
-  }
-
-  .slide:first-child {
-    background-color: $color-slider-light-background;
-    background-image: none;
-
-    &::before {
-      background-color: $color-slider-light-background;
-    }
-  }
-
-  .slide:nth-child(2) {
-    background-color: $color-slider-background;
-    background-image: none;
-
-    &::before {
-      background-color: $color-slider-background;
-    }
-  }
-
-  .slide:last-child {
-    background-color: $color-slider-dark-background;
-    background-image: none;
-
-    &::before {
-      background-color: $color-slider-dark-background;
-    }
   }
 
   .slide__image {
@@ -217,28 +205,29 @@
 
   .slide__label {
     margin-top: 150px;
-    padding: 0 30px;
+    padding: 0;
     text-align: left;
   }
 
   .slide__title {
-    padding: 0 30px;
+    padding: 0;
     text-align: left;
   }
 
   .slide__description {
     margin-bottom: 40px;
-    padding: 0 30px;
+    padding: 0;
     text-align: left;
   }
 
   .slide__price {
     align-self: start;
-    padding-left: 30px;
+    padding: 4px 0;
   }
 
   .slide__button {
     align-self: start;
     width: 113px;
+    margin-left: -10px;
   }
 }
