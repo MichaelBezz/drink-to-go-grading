@@ -9,6 +9,7 @@
     <link rel="preload" href="./fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./leaflet/leaflet.css" crossorigin="">
   </head>
 
   <body class="page__body js-exception">
@@ -423,7 +424,7 @@
           </picture>
         </figure>
 
-        <div class="map__leaflet js-map"></div>
+        <div class="map__leaflet"></div>
       </section>
     </main>
 
@@ -526,7 +527,7 @@
       </div>
     </footer>
 
-    <script src="./js/main.min.js"></script>
-    <script src="./js/mobile-menu.min.js"></script>
+    <script src="./leaflet/leaflet.js" crossorigin=""></script>
+    <script src="./js/main.min.js" type="module"></script>
   </body>
 </html>

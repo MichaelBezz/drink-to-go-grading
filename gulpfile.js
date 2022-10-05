@@ -14,7 +14,6 @@ import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
 
-
 // Styles
 export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
@@ -92,7 +91,8 @@ const copy = (done) => {
   return gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    'source/*.webmanifest'
+    'source/*.webmanifest',
+    'source/leaflet/**/*'
   ], {
     base: 'source'
   })
