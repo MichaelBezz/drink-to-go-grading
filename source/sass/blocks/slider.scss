@@ -1,7 +1,7 @@
 .slider {
   position: relative;
   min-width: $small-width;
-  width: 100%;
+  max-width: 100vw;
 }
 
 .slider__toggle {
@@ -58,13 +58,11 @@
   }
 
   .slider__pagination {
+    z-index: 1;
     position: absolute;
-    left: 50%;
-    bottom: 60px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 8px;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
   }
 
   .slider__pagination-button {
@@ -86,5 +84,9 @@
         $transparent 14px
       );
     }
+  }
+
+  .slider__pagination-button:not(:last-child) {
+    margin-right: 8px;
   }
 }

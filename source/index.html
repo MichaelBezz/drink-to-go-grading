@@ -9,6 +9,7 @@
     <link rel="preload" href="./fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./leaflet/leaflet.css" crossorigin="">
   </head>
 
@@ -70,11 +71,11 @@
     <main class="main">
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков - «Drink2Go».</h1>
 
-      <section class="slider">
+      <section class="slider swiper">
         <h2 class="visually-hidden">Слайдер с промо-товарами.</h2>
 
-        <div class="slider__list">
-          <div class="slider__item slide slide--white">
+        <div class="slider__list swiper-wrapper">
+          <div class="slider__item slide slide--white swiper-slide">
             <div class="slide__wrapper">
               <figure class="slide__image">
                 <picture>
@@ -96,7 +97,7 @@
               <a class="slide__button button" href="#">Заказать</a>
             </div>
           </div>
-          <div class="slider__item slide slide--latte slide--hidden">
+          <div class="slider__item slide slide--latte swiper-slide">
             <div class="slide__wrapper">
               <figure class="slide__image">
                 <picture>
@@ -118,7 +119,7 @@
               <a class="slide__button button" href="#">Заказать</a>
             </div>
           </div>
-          <div class="slider__item slide slide--espresso slide--hidden">
+          <div class="slider__item slide slide--espresso swiper-slide">
             <div class="slide__wrapper">
               <figure class="slide__image">
                 <picture>
@@ -142,17 +143,7 @@
           </div>
         </div>
 
-        <div class="slider__pagination">
-          <button class="slider__pagination-button slider__pagination-button--active" type="button">
-            <span class="visually-hidden">Первый слайд.</span>
-          </button>
-          <button class="slider__pagination-button" type="button">
-            <span class="visually-hidden">Второй слайд.</span>
-          </button>
-          <button class="slider__pagination-button" type="button">
-            <span class="visually-hidden">Третий слайд.</span>
-          </button>
-        </div>
+        <div class="slider__pagination"></div>
 
         <button class="slider__toggle slider__toggle--previous" type="button">
           <span class="visually-hidden">Предыдущий слайд.</span>
