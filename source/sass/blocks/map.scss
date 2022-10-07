@@ -6,9 +6,9 @@
 .map__image {
   @include image-normalize;
   display: none;
-  width: 320px;
-  height: 420px;
+  width: 100%;
   margin: 0 auto;
+  object-fit: cover;
 
   .js-exception & {
     display: block;
@@ -25,22 +25,14 @@
 }
 
 @media (min-width: $medium-width) {
-  .map__image {
-    width: 768px;
-    height: 480px;
-  }
-
+  .map__image,
   .map__leaflet {
     height: 480px;
   }
 }
 
 @media (min-width: $large-width) {
-  .map__image {
-    width: 1440px;
-    height: 540px;
-  }
-
+  .map__image,
   .map__leaflet {
     height: 540px;
   }
