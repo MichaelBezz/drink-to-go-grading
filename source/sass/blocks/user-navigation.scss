@@ -11,10 +11,25 @@
   padding: 22px;
   font-size: 0;
   line-height: 0;
-}
+  color: $color-text;
 
-.user-navigation__icon {
-  fill: $color-header-icon;
+  &:hover {
+    color: $color-header-link-hover;
+  }
+
+  &:focus {
+    outline: auto;
+  }
+
+  &:focus-visible {
+    color: $color-header-link-focus;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-header-link-background-active;
+    outline: none;
+  }
 }
 
 @media (min-width: $medium-width) {

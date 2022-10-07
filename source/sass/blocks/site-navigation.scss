@@ -23,6 +23,24 @@
   color: $color-text;
   background-color: $color-background;
   border-bottom: 1px solid $color-header-border;
+
+  &:hover {
+    color: $color-header-link-hover;
+  }
+
+  &:focus {
+    outline: auto;
+  }
+
+  &:focus-visible {
+    color: $color-header-link-focus;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-header-link-background-active;
+    outline: none;
+  }
 }
 
 @media (min-width: $medium-width) {
@@ -43,7 +61,7 @@
     border: 0;
   }
 
-  .site-navigation__link--active {
+  .site-navigation__link--current {
     color: $color-header-link-active;
 
     &::after {

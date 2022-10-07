@@ -6,6 +6,24 @@
   @include link-reset;
   flex: 0 0 auto;
   padding: 12px 20px;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:focus {
+    outline: auto;
+  }
+
+  &[href]:focus-visible {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    outline: none;
+    opacity: 0.3;
+  }
 }
 
 .logo__image {

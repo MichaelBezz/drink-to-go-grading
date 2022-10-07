@@ -30,6 +30,11 @@
   width: 60px;
   height: 60px;
   padding: 24px 22px;
+
+  &:active {
+    background-color: $color-header-link-background-active;
+    outline: none;
+  }
 }
 
 // Классы для оживления мобильного меню
