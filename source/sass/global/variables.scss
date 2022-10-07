@@ -21,6 +21,7 @@ $gray-light: #e5e6e8;
 $gray: #e2e2e2;
 $gray-dark: #bdbdbd;
 $gray-darken: #333333;
+$gray-darkest: #000000;
 
 // Основной цвет проекта
 $base-lighten: #f0ebff;
@@ -37,75 +38,143 @@ $subbase: #f3ebe1;
 $color-text: $gray-darken;
 $color-title: $base-dark;
 $color-background: $color-inverse;
+
 $color-button-text: $color-inverse;
 $color-button-background: $base-dark;
+$color-button-background-hover: $base;
+$color-button-background-focus: $base;
+$color-button-background-active: $base-darken;
+$color-button-background-disable: $gray-dark;
+
+$color-button-light-text: $base-dark;
+$color-button-light-text-state: $color-inverse;
+$color-button-light-background: $color-inverse;
+$color-button-light-background-hover: $base;
+$color-button-light-background-focus: $base;
+$color-button-light-background-active: $base-darken;
+$color-button-light-background-disabled: $gray;
 
 // Header
 $color-header-icon: $gray-darken;
+$color-header-link-hover: $base-dark;
+$color-header-link-focus: $base-dark;
 $color-header-link-active: $base-dark;
+$color-header-link-background-active: $base-lighten;
 $color-header-border: $base-lighten;
 
 // Slider
 $color-slider-label: $base-dark;
 $color-slider-price-regular: $base-dark;
-$color-slider-toggle-icon: $base-dark;
-$color-slider-toggle-background: $transparent;
-$color-slider-pagination-active: $base-dark;
-$color-slider-pagination-background: $color-inverse;
 $color-slider-white-background: $subbase;
 $color-slider-latte-background: $base-light;
 $color-slider-espresso-background: $gray-light;
 
+$color-slider-toggle-icon: $base-dark;
+$color-slider-toggle-background: $transparent;
+$color-slider-toggle-background-hover: $color-inverse;
+$color-slider-toggle-background-focus: $color-inverse;
+$color-slider-toggle-background-active: rgba($base-dark, 0);
+$color-slider-toggle-background-active-alpha: rgba($base-dark, 0.25);
+$color-slider-toggle-background-disabled: $gray-dark;
+
+$color-slider-pagination-hover: rgba($base-dark, 0.25);
+$color-slider-pagination-focus: rgba($base-dark, 0.25);
+$color-slider-pagination-active: $base-dark;
+$color-slider-pagination-current: $base-dark;
+$color-slider-pagination-background: $color-inverse;
+
 // Catalog
 $color-catalog-background: $gray-lighten;
-
-// Filter
-$color-filter-reset-button-text: $base-dark;
-$color-filter-reset-button-background: $color-inverse;
 
 // Range
 $color-range-scale: $gray;
 $color-range-level: $base;
+$color-range-level-disabled: $gray-dark;
+
+$color-range-pin-hover: rgba($base-dark, 0.25);
+$color-range-pin-focus: rgba($base-dark, 0.25);
+$color-range-pin-active: $base-dark;
 $color-range-pin-background: $color-inverse;
 $color-range-pin-border: $base;
+$color-range-pin-border-disabled: $gray-dark;
+
 $color-range-separator: $gray-dark;
-$color-range-input-border: $base;
+
+$color-range-input: $base;
+$color-range-input-state: $base-darken;
+$color-range-input-disabled: $gray-dark;
+$color-range-input-placeholder: $gray-dark;
 
 // Radio-input
+$color-radio-input-checked: $base-dark;
+$color-radio-input-hover: rgba($base-dark, 0.25);
+$color-radio-input-focus: rgba($base-dark, 0.25);
+$color-radio-input-disabled: $gray;
+
 $color-radio-input-background: $color-inverse;
+
 $color-radio-input-border: $gray-dark;
-$color-radio-input-active: $base-dark;
-$color-radio-input-active-border: $base-dark;
+$color-radio-input-border-checked: $base-dark;
+$color-radio-input-border-hover: $base;
+$color-radio-input-border-focus: $base;
+$color-radio-input-border-disabled: $gray;
 
 // Checkbox-input
 $color-checkbox-input: $color-inverse;
+$color-checkbox-input-disabled: $gray-dark;
+
 $color-checkbox-input-background: $gray-dark;
-$color-checkbox-input-active-background: $base-dark;
+$color-checkbox-input-background-checked: $base-dark;
+$color-checkbox-input-background-hover: rgba($base, 0.25);
+$color-checkbox-input-background-focus: rgba($base, 0.25);
+$color-checkbox-input-background-disabled: $gray;
+
+$color-checkbox-input-border: $gray-dark;
+$color-checkbox-input-border-checked: $base-dark;
+$color-checkbox-input-border-hover: $base;
+$color-checkbox-input-border-focus: $base;
+$color-checkbox-input-border-disabled: $gray;
 
 // Select
 $color-select-text: $base-dark;
 $color-select-background: $transparent;
+$color-select-background-hover: $base-lighten;
+$color-select-background-focus: $base-lighten;
 
 // Products
+$color-product-title-hover: $base-dark;
+$color-product-title-focus: $base-dark;
+$color-product-title-active: $base-darken;
 $color-product-background: $color-inverse;
+$color-product-shadow: rgba($gray-darkest, 0.15);
 
 // Pagination
 $color-pagination-icon: $base-dark;
-$color-pagination-button-text: $base-dark;
-$color-pagination-button-background: $color-inverse;
-$color-pagination-button-active-text: $gray-darken;
-$color-pagination-button-active-background: $transparent;
+$color-pagination-button-text-current: $gray-darken;
+$color-pagination-button-background-current: $transparent;
+$color-pagination-button-background-disabled: $transparent;
 
 // Map
 $color-map-text: $base;
 
 // Social
 $color-social-icon: $gray-dark;
+$color-social-icon-hover: $base-dark;
+$color-social-icon-focus: $base-dark;
+$color-social-icon-active: $base-dark;
+$color-social-icon-background-hover: $base-lighten;
+$color-social-icon-background-focus: $base-lighten;
+$color-social-icon-background-active: rgba($base-dark, 0.25);
 
 // Group
 $color-group-title: $base-dark;
+$color-group-link-hover: $base;
+$color-group-link-focus: $base;
+$color-group-link-active: $base-darken;
 $color-group-border: $base-lighten;
 
 // Copyright
 $color-copyright-text: $gray-dark;
-$color-copyright-logo: $gray-dark;
+$color-copyright-text-hover: $base-dark;
+$color-copyright-text-focus: $base-dark;
+$color-copyright-text-active: $base-darken;
