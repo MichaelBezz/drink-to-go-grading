@@ -85,10 +85,47 @@
 .filter__input:checked + .filter__label--radio::before {
   background-image: radial-gradient(
     circle closest-side at center,
-    $color-radio-input-active 75%,
+    $color-radio-input-checked 75%,
     $color-radio-input-background 80%
   );
-  border-color: $color-radio-input-active-border;
+  border-color: $color-radio-input-border-checked;
+}
+
+.filter__input:not(:checked):not(:disabled) + .filter__label--radio:hover::before {
+  background-image: radial-gradient(
+    circle closest-side at center,
+    $color-radio-input-hover 75%,
+    $color-radio-input-background 80%
+  );
+  border-color: $color-radio-input-border-hover;
+}
+
+.filter__input:focus-visible + .filter__label--radio::before {
+  background-image: radial-gradient(
+    circle closest-side at center,
+    $color-radio-input-focus 75%,
+    $color-radio-input-background 80%
+  );
+  border-color: $color-radio-input-border-focus;
+}
+
+.filter__input:disabled + .filter__label {
+  color: $color-radio-input-disabled;
+  cursor: default;
+}
+
+.filter__input:checked:disabled + .filter__label--radio::before {
+  background-image: radial-gradient(
+    circle closest-side at center,
+    $color-radio-input-disabled 75%,
+    $color-radio-input-background 80%
+  );
+  border-color: $color-radio-input-border-disabled;
+}
+
+.filter__input:disabled + .filter__label--radio::before {
+  background-image: none;
+  border-color: $color-radio-input-border-disabled;
 }
 
 .filter__label--checkbox {
@@ -102,6 +139,7 @@
     width: 42px;
     height: 24px;
     background-color: $color-checkbox-input-background;
+    border: 2px solid $color-checkbox-input-border;
     border-radius: 12px;
     transform: translateY(-50%);
   }
@@ -120,11 +158,32 @@
 }
 
 .filter__input:checked + .filter__label--checkbox::before {
-  background-color: $color-checkbox-input-active-background;
+  background-color: $color-checkbox-input-background-checked;
+  border-color: $color-checkbox-input-border-checked;
 }
 
 .filter__input:checked + .filter__label--checkbox::after {
   left: 22px;
+}
+
+.filter__input:not(:checked):not(:disabled) + .filter__label--checkbox:hover::before {
+  background-color: $color-checkbox-input-background-hover;
+  border-color: $color-checkbox-input-border-hover;
+}
+
+.filter__input:focus-visible + .filter__label--checkbox::before {
+  background-color: $color-checkbox-input-background-focus;
+  border-color: $color-checkbox-input-border-focus;
+}
+
+.filter__input:disabled + .filter__label--checkbox::before {
+  background-color: $color-checkbox-input-background-disabled;
+  border-color: $color-checkbox-input-border-disabled;
+}
+
+.filter__input:checked:disabled + .filter__label--checkbox::after {
+  left: 22px;
+  background-color: $color-checkbox-input-disabled;
 }
 
 .filter__buttons {
@@ -148,8 +207,6 @@
   padding: 10px;
   font-size: 14px;
   line-height: math.div(24, 14);
-  color: $color-filter-reset-button-text;
-  background-color: $color-filter-reset-button-background;
 }
 
 @media (min-width: $medium-width) {

@@ -13,4 +13,55 @@
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+
+  &:hover:not(.button--disabled):not(:disabled) {
+    background-color: $color-button-background-hover;
+  }
+
+  &:focus-visible:not(.button--disabled):not(:disabled) {
+    background-color: $color-button-background-focus;
+    outline: none;
+  }
+
+  &:active:not(.button--disabled):not(:disabled) {
+    background-color: $color-button-background-active;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-button-background-disable;
+    cursor: default;
+  }
+
+  // Использовать класс, если в качестве <button> использован тег <a>
+  &--disabled {
+    background-color: $color-button-background-disable;
+    cursor: default;
+  }
+}
+
+.button--light {
+  color: $color-button-light-text;
+  background-color: $color-button-light-background;
+
+  &:hover {
+    color: $color-button-light-text-state;
+    background-color: $color-button-light-background-hover;
+  }
+
+  &:focus-visible {
+    color: $color-button-light-text-state;
+    background-color: $color-button-light-background-focus;
+  }
+
+  &:active {
+    color: $color-button-light-text-state;
+    background-color: $color-button-light-background-active;
+  }
+
+  &:disabled {
+    color: $color-button-light-text-state;
+    background-color: $color-button-light-background-disabled;
+    cursor: default;
+  }
 }

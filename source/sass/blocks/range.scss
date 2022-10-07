@@ -1,3 +1,10 @@
+/*
+  Классы и атрибуты для блокировки range:
+  .range__level--disabled
+  .range__pin:disabled
+  .range__input:disabled
+*/
+
 .range {
   display: flex;
   flex-direction: column;
@@ -26,6 +33,10 @@
   height: 4px;
   background-color: $color-range-level;
   transform: translateY(-80%);
+
+  &--disabled {
+    background-color: $color-range-level-disabled;
+  }
 }
 
 .range__pin {
@@ -46,6 +57,42 @@
 
   &--max {
     right: 8%;
+  }
+
+  &:hover {
+    background-image: radial-gradient(
+      circle closest-side at center,
+      $color-range-pin-hover 75%,
+      $color-range-pin-background 80%
+    );
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    background-image: radial-gradient(
+      circle closest-side at center,
+      $color-range-pin-focus 75%,
+      $color-range-pin-background 80%
+    );
+    border: 2px solid $color-range-pin-border;
+  }
+
+  &:active {
+    background-image: radial-gradient(
+      circle closest-side at center,
+      $color-range-pin-active 75%,
+      $color-range-pin-background 80%
+    );
+    outline: none;
+  }
+
+  &:disabled {
+    background-image: none;
+    border-color: $color-range-pin-border-disabled;
+    cursor: default;
   }
 }
 
@@ -74,8 +121,42 @@
   line-height: math.div(24, 16);
   font-weight: 500;
   text-align: center;
-  border: 2px solid $color-range-input-border;
+  border: 2px solid $color-range-input;
   border-radius: 4px;
+  appearance: textfield;
+
+  &:hover {
+    border-color: $color-range-input-state;
+  }
+
+  &:focus {
+    outline: auto;
+  }
+
+  &:focus-visible {
+    border-color: $color-range-input-state;
+    outline: none;
+  }
+
+  &:active {
+    border-color: $color-range-input-state;
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-range-input-placeholder;
+    border-color: $color-range-input-disabled;
+  }
+}
+
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range__input::placeholder {
+  color: $color-range-input-placeholder;
 }
 
 @media (min-width: $medium-width) {
