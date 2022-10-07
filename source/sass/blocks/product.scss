@@ -10,6 +10,14 @@
   padding-top: 39px;
   background-color: $color-product-background;
   border-radius: 4px;
+
+  &:hover {
+    box-shadow: 0 5px 15px $color-product-shadow;
+  }
+
+  &:focus-within {
+    box-shadow: 0 5px 15px $color-product-shadow;
+  }
 }
 
 .product__image-link {
@@ -37,6 +45,24 @@
   line-height: math.div(32, 18);
   font-weight: 700;
   color: $color-text;
+
+  &:hover {
+    color: $color-product-title-hover;
+  }
+
+  &:focus {
+    outline: auto;
+  }
+
+  &:focus-visible {
+    color: $color-product-title-focus;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-product-title-active;
+    outline: none;
+  }
 }
 
 .product__description {

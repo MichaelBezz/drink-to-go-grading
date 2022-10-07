@@ -6,14 +6,10 @@
 }
 
 .pagination__button {
-  @include button-reset;
   width: 40px;
   height: 40px;
   font-size: 16px;
   line-height: math.div(24, 16);
-  text-align: center;
-  color: $color-pagination-button-text;
-  background-color: $color-pagination-button-background;
 
   &--previous,
   &--next {
@@ -21,10 +17,15 @@
     line-height: 0;
   }
 
-  &--active {
+  &--current {
     font-weight: 600;
-    color: $color-pagination-button-active-text;
-    background-color: $color-pagination-button-active-background;
+    color: $color-pagination-button-text-current;
+    background-color: $color-pagination-button-background-current;
+  }
+
+  &--disabled {
+    font-size: 0;
+    line-height: 0;
   }
 }
 

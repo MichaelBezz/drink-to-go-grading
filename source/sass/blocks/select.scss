@@ -1,20 +1,41 @@
 .select {
   display: flex;
+  align-items: center;
+  min-width: 280px;
   margin: 0 auto;
   margin-bottom: 16px;
+}
+
+.select__wrapper {
+  width: 100%;
+  background-image: url("../img/decor/arrow-select.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+  background-position: center right 6px;
+
+  &:hover {
+    background-color: $color-select-background-hover;
+  }
+
+  &:focus-within {
+    background-color: $color-select-background-focus;
+    outline: none;
+  }
 }
 
 .select__title {
   margin: 0;
   margin-right: 14px;
-  padding: 4px 0;
+  padding: 4px 2px;
   font-size: 16px;
   line-height: math.div(24, 16);
   font-weight: 600;
 }
 
 .select__list {
-  width: 155px;
+  width: 100%;
+  padding: 4px;
+  padding-right: 20px;
   font-family: $font-main;
   font-style: normal;
   font-size: 16px;
@@ -23,6 +44,15 @@
   color: $color-select-text;
   background-color: $color-select-background;
   border: 0;
+  appearance: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.select__option {
+  color: $color-text;
 }
 
 @media (min-width: $medium-width) {
