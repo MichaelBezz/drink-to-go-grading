@@ -6,7 +6,6 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import htmlmin from 'gulp-htmlmin';
-import include from 'gulp-file-include';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
@@ -31,10 +30,6 @@ export const styles = () => {
 // HTML
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(include({
-      prefix: '@@',
-      basepath: '@file'
-    }))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
