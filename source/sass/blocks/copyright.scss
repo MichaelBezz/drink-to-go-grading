@@ -43,6 +43,7 @@
 
 .copyright__logo {
   @include image-normalize;
+  flex: 0 0 auto;
   width: 12px;
   height: 16px;
   margin-left: 4px;

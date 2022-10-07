@@ -26,6 +26,8 @@
 .advantages__list {
   @include list-reset;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 10px;
   row-gap: 32px;
 }
 
@@ -82,7 +84,7 @@
   }
 
   .advantages__list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(339px, 1fr));
     column-gap: 30px;
     row-gap: 50px;
     padding: 10px;

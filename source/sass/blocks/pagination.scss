@@ -6,8 +6,8 @@
 }
 
 .pagination__button {
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   font-size: 16px;
   line-height: math.div(24, 16);
 

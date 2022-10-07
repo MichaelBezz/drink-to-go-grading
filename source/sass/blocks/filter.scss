@@ -20,21 +20,25 @@
 
   &--milk {
     grid-area: fl-milk;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   &--country {
     grid-area: fl-country;
-    margin-bottom: 34px;
+    margin-bottom: 30px;
   }
 }
 
 .filter__legend {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   padding: 0;
   font-size: 16px;
   line-height: math.div(24, 16);
   font-weight: 600;
+}
+
+.filter__fieldset--range .filter__legend {
+  margin-bottom: 22px;
 }
 
 .filter__list {
@@ -42,11 +46,11 @@
 }
 
 .filter__fieldset--milk .filter__item:not(:last-child) {
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .filter__fieldset--country .filter__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .filter__input {
@@ -59,6 +63,7 @@
 
 .filter__label {
   position: relative;
+  display: block;
   padding: 4px;
   font-size: 16px;
   line-height: math.div(24, 16);
@@ -236,17 +241,21 @@
   }
 
   .filter__legend {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     padding-right: 20px;
   }
 
-  .filter__fieldset--milk .filter__item:not(:last-child) {
+  .filter__fieldset--range .filter__legend {
     margin-bottom: 20px;
+  }
+
+  .filter__fieldset--milk .filter__item:not(:last-child) {
+    margin-bottom: 12px;
   }
 
   .filter__buttons {
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 36px;
   }
 
   .filter__send {
@@ -283,11 +292,11 @@
     }
 
     &--milk {
-      margin-bottom: 30px;
+      margin-bottom: 26px;
     }
 
     &--country {
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
   }
 
