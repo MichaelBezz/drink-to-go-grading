@@ -9,19 +9,20 @@
   width: 100%;
   margin: 0 auto;
   object-fit: cover;
-
-  .js-exception & {
-    display: block;
-  }
 }
 
 .map__leaflet {
   width: 100%;
   height: 420px;
+}
 
-  .js-exception & {
-    display: none;
-  }
+// js-exception служебный класс, который показывает, что c js что-то не так
+.js-exception .map__image {
+  display: block;
+}
+
+.js-exception .map__leaflet {
+  display: none;
 }
 
 @media (min-width: $medium-width) {

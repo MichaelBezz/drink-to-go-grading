@@ -29,7 +29,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  width: 92%;
+  width: 93%;
   height: 4px;
   background-color: $color-range-level;
   transform: translateY(-80%);
@@ -56,7 +56,7 @@
   }
 
   &--max {
-    right: 8%;
+    right: 7%;
   }
 
   &:hover {
@@ -166,6 +166,16 @@
     margin-bottom: 21px;
   }
 
+  .range__level {
+    width: 91%;
+  }
+
+  .range__pin {
+    &--max {
+      right: 9%;
+    }
+  }
+
   .range__control {
     column-gap: 14px;
   }
@@ -187,6 +197,16 @@
 
   .range__scale {
     margin-bottom: 20px;
+  }
+
+  .range__level {
+    width: 94%;
+  }
+
+  .range__pin {
+    &--max {
+      right: 6%;
+    }
   }
 
   .range__control {
