@@ -21,6 +21,24 @@
   font-size: 12px;
   line-height: math.div(16, 12);
   color: $color-copyright-text;
+
+  &:hover {
+    color: $color-copyright-text-hover;
+  }
+
+  &:focus {
+    outline: auto;
+  }
+
+  &:focus-visible {
+    color: $color-copyright-text-focus;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-copyright-text-active;
+    outline: none;
+  }
 }
 
 .copyright__logo {
@@ -28,7 +46,6 @@
   width: 12px;
   height: 16px;
   margin-left: 4px;
-  fill: $color-copyright-logo;
 }
 
 

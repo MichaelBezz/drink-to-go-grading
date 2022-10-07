@@ -12,11 +12,32 @@
   width: 40px;
   height: 40px;
   padding: 8px;
+  color: $color-social-icon;
+
+  &:hover {
+    color: $color-social-icon-hover;
+    background-color: $color-social-icon-background-hover;
+  }
+
+  &:focus {
+    outline: auto;
+  }
+
+  &:focus-visible {
+    color: $color-social-icon-hover;
+    background-color: $color-social-icon-background-hover;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-social-icon-hover;
+    background-color: $color-social-icon-background-active;
+    outline: none;
+  }
 }
 
 .social__icon {
   margin: auto;
-  fill: $color-social-icon;
 }
 
 @media (min-width: $medium-width) {

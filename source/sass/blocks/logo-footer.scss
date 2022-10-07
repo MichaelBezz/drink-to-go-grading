@@ -1,6 +1,24 @@
 .logo-footer__link {
   @include link-reset;
   padding: 22px 20px 17px;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:focus {
+    outline: auto;
+  }
+
+  &[href]:focus-visible {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    outline: none;
+    opacity: 0.3;
+  }
 }
 
 .logo-footer__image {
