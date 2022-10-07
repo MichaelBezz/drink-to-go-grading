@@ -8,11 +8,17 @@ export const buildSwiper = () => {
       clickable: true,
       bulletElement: 'button',
       bulletClass: 'slider__pagination-button',
-      bulletActiveClass:'slider__pagination-button--active'
+      bulletActiveClass:'slider__pagination-button--current'
     },
     navigation: {
       nextEl: '.slider__toggle--next',
-      prevEl: '.slider__toggle--previous'
+      prevEl: '.slider__toggle--previous',
+      disabledClass: 'slider__toggle--disabled'
+    },
+    a11y: {
+      paginationBulletMessage: 'Перейти к слайду {{index}}',
+      nextSlideMessage: 'Следующий слайд',
+      prevSlideMessage: 'Предыдущий слайд'
     }
   })
 };

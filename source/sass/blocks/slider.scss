@@ -12,6 +12,7 @@
   display: flex;
   width: 20px;
   height: 100%;
+  color: $color-slider-toggle-icon;
 
   &--previous {
     left: 0;
@@ -22,11 +23,54 @@
     right: 0;
     background-color: $color-slider-toggle-background;
   }
+
+  &--previous:hover {
+    background-image: linear-gradient(90deg, $color-slider-toggle-background-hover 0%, $transparent 100%);
+  }
+
+  &--next:hover {
+    background-image: linear-gradient(90deg, $transparent 0%, $color-slider-toggle-background-hover 100%);
+  }
+
+  &:focus {
+    outline: auto;
+  }
+
+  &--previous:focus-visible {
+    background-image: linear-gradient(90deg, $color-slider-toggle-background-focus 0%, $transparent 100%);
+    outline: none;
+  }
+
+  &--next:focus-visible {
+    background-image: linear-gradient(90deg, $transparent 0%, $color-slider-toggle-background-focus 100%);
+    outline: none;
+  }
+
+  &--previous:active {
+    background-image: linear-gradient(90deg, $color-slider-toggle-background-active-alpha 0%, $color-slider-toggle-background-active 100%);
+  }
+
+  &--next:active {
+    background-image: linear-gradient(90deg, $color-slider-toggle-background-active 0%, $color-slider-toggle-background-active-alpha 100%);
+  }
+
+  &--disabled {
+    color: $color-slider-toggle-background-disabled;
+    background-color: $color-slider-toggle-background;
+    background-image: none;
+    cursor: default;
+  }
+
+  &:disabled {
+    color: $color-slider-toggle-background-disabled;
+    background-color: $color-slider-toggle-background;
+    background-image: none;
+    cursor: default;
+  }
 }
 
 .slider__toggle-icon {
   margin: auto;
-  fill: $color-slider-toggle-icon;
 
   &--previous {
     transform: rotate(180deg);
@@ -40,7 +84,7 @@
 @media (min-width: $medium-width) {
   .slider__toggle {
     width: 80px;
-    height: 78%;
+    height: 77%;
   }
 }
 
@@ -76,13 +120,46 @@
       $transparent 14px
     );
 
-    &--active {
+    &--current {
+      background-image: linear-gradient(
+        $transparent 10px,
+        $color-slider-pagination-current 10px,
+        $color-slider-pagination-current 14px,
+        $transparent 14px
+      );
+    }
+
+    &:hover {
+      background-image: linear-gradient(
+        $transparent 10px,
+        $color-slider-pagination-hover 10px,
+        $color-slider-pagination-hover 14px,
+        $transparent 14px
+      );
+    }
+
+    &:focus {
+      outline: auto;
+    }
+
+    &:focus-visible {
+      background-image: linear-gradient(
+        $transparent 10px,
+        $color-slider-pagination-focus 10px,
+        $color-slider-pagination-focus 14px,
+        $transparent 14px
+      );
+      outline: none;
+    }
+
+    &:active {
       background-image: linear-gradient(
         $transparent 10px,
         $color-slider-pagination-active 10px,
         $color-slider-pagination-active 14px,
         $transparent 14px
       );
+      outline: none;
     }
   }
 
