@@ -32,10 +32,6 @@
     background-image: linear-gradient(90deg, $transparent 0%, $color-slider-toggle-background-hover 100%);
   }
 
-  &:focus {
-    outline: auto;
-  }
-
   &--previous:focus-visible {
     background-image: linear-gradient(90deg, $color-slider-toggle-background-focus 0%, $transparent 100%);
     outline: none;
@@ -136,10 +132,6 @@
         $color-slider-pagination-hover 14px,
         $transparent 14px
       );
-    }
-
-    &:focus {
-      outline: auto;
     }
 
     &:focus-visible {
